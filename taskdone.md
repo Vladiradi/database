@@ -54,7 +54,9 @@ join SELLERS s2
 on s1.CITY = s2.CITY and s1.SELL_ID < s2.SELL_ID;
 ```
 -- 8. Вывести имена начальников и их подчиненных, если у начальника комиссия выше, чем у подчиненного.
+```
 select boss.SNAME as boss, emp.SNAME as employee
 from SELLERS emp
 join SELLERS boss on emp.BOSS_ID = boss.SELL_ID
 where boss.COMM > emp.COMM;
+```
